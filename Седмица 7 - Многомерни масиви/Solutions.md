@@ -174,10 +174,10 @@ int main()
         for (int j = 1; j < size + 1; j++)
         {
             board[i][j] = currSymbol;
-            currSymbol = switchSymbols(currSymbol);
+            currSymbol = switchSymbol(currSymbol);
         }
         
-        currSymbol = switchSymbols(currSymbol);
+        currSymbol = switchSymbol(currSymbol);
     }
     
     board[size][0] = ' ';
@@ -213,10 +213,10 @@ int main()
         for (int j = 1; j < size + 1; j++)
         {
             board[i][j] = currSymbol;
-            currSymbol = switchSymbols(currSymbol);
+            currSymbol = switchSymbol(currSymbol);
         }
         
-        currSymbol = switchSymbols(currSymbol);
+        currSymbol = switchSymbol(currSymbol);
     }
     
     board[size][0] = ' ';
