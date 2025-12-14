@@ -228,7 +228,7 @@ int main()
         board[size][i] = letterCoord++;
     }
   
-    char coords[2] {};
+    char coords[3] {};
     std::cin >> coords;
     
     while (coords[0] != 'Q')
