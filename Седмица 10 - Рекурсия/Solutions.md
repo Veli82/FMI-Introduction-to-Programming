@@ -3,7 +3,7 @@
 ```cpp
 long long factorial(int number)
 {
-    if (number == 1)
+    if (number <= 1)
     {
         return 1;
     }
@@ -50,10 +50,10 @@ int fib(int n)
 ```cpp
 int sumOfDigits(int num)
 {
-    if (num == 0)
-    {
-        return 0;
-    }
+	if (num % 10 == 0)
+	{
+		return num;
+	}
     
     return num % 10 + sumOfDigits(num / 10);
 }
@@ -82,7 +82,10 @@ void print(int n)
 ```cpp
 int strLen(char* str)
 {
-	if (*str == '\0') return 0;
+	if (*str == '\0')
+    {
+        return 0;
+    }
 
 	return 1 + strLen(str + 1);
 }
@@ -140,14 +143,14 @@ bool find(const char* str, char symbol)
 ```cpp
 bool areEqual(const char* str1, const char* str2)
 {
-    if (*str1 == '\0' && *str2 == '\0')     //if both end at the same time
-        return true;
-    if (
-        (*str1 == '\0' && *str2 != '\0')    //if str1 ended and str2 not
-        || (*str1 != '\0' && *str2 == '\0') //or str2 ended and str1 not
-        || (*str1 != *str2)                 //or 2 chars at the same position are not equal
-        )
-        return false;
+	if (*str1 != *str2)
+	{
+		return false;
+	}
+	if (*str1 == '\0')
+	{
+		return true;
+	}
     return areEqual(str1 + 1, str2 + 1);
 }
 ```
